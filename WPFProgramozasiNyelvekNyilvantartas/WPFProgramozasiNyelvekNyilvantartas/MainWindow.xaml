@@ -1,0 +1,36 @@
+﻿<Window x:Class="WPFProgramozasiNyelvekNyilvantartas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFProgramozasiNyelvekNyilvantartas"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Nyelv neve"/>
+            <TextBox x:Name="tbNev" Width="100"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <RadioButton x:Name="rbFordito" Content="Fordító" IsChecked="True"/>
+            <RadioButton x:Name="rbInterpreter" Content="Interpreter"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Nyelvcsalád"/>
+            <ComboBox x:Name="cbCsalad"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Megjelenés"/>
+            <TextBox x:Name="tbMegjelenes" Width="50"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <RadioButton x:Name="rbMagas" Content="Magasszintű" IsChecked="True"/>
+            <RadioButton x:Name="rbAlacsony" Content="Alacsonyszintű"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Népszerűság"/>
+            <Slider x:Name="sliNepszeruseg" Maximum="20" Minimum="1" Width="400"/>
+        </StackPanel>
+        <Button Content="Rögzít" Width="200" Click="Rogzites"/>
+    </StackPanel>
+</Window>
